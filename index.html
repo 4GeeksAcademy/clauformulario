@@ -19,50 +19,52 @@
       <div class="card-header">
         <strong>Payment for example</strong>
       </div>
-      <div class="alert alert-danger" role="alert">
+      <div id="alerta" class="alert alert-danger" role="alert">
         Some field are missing
       </div>
 
       <div class="card-body">
-        <form class="row g-3">
+        <form onsubmit="validarFormulario(event)"  class="row g-3">
           <div class="col-5">
             <label for="inputEmail4" class="form-label">Card#</label>
-            <input type="email" class="form-control" id="inputEmail4">
+            <input type="text" class="form-control" id="tarjeta" placeholder="XXXXXX">
           </div>
           <div class="col-3">
             <label for="inputPassword4" class="form-label">CVC#</label>
-            <input type="password" class="form-control" id="inputPassword4">
+            <input type="text" class="form-control" id="cvc" placeholder="0000">
           </div>
           <div class="col-4">
             <label for="inputAddress" class="form-label">Amount</label>
-            <input type="text" class="form-control" id="inputAddress" placeholder="1234 Main St">
+            <input type="text" class="form-control" id="amount" placeholder="1234 Main St">
           </div>
           <div class="col-6">
             <label for="inputAddress2" class="form-label">First Name</label>
-            <input type="text" class="form-control" id="inputAddress2" placeholder="Apartment, studio, or floor">
+            <input type="text" class="form-control" id="firstname" placeholder="Apartment, studio, or floor">
           </div>
 
           <div class="col-6">
             <label for="inputCity" class="form-label">Last Name</label>
-            <input type="text" class="form-control" id="inputCity">
+            <input type="text" class="form-control" id="lastname">
           </div>
 
           <div class="col-6">
             <label for="inputState" class="form-label">City</label>
-            <select id="inputState" class="form-select">
+            <select id="city" class="form-select">
               <option selected>Choose...</option>
-              <option>...</option>
+              <option>Colonia</option>
+              <option>Montevideo</option>
+              <option>Melo</option>
             </select>
           </div>
 
           <div class="col-3">
             <label for="inputZip" class="form-label">State</label>
-            <input type="text" class="form-control" id="inputZip">
+            <input type="text" class="form-control" id="state">
           </div>
 
           <div class="col-3">
             <label for="inputZip" class="form-label">Postal code</label>
-            <input type="text" class="form-control" id="inputZip">
+            <input type="text" class="form-control" id="postalcode">
           </div>
 
           <div class="col-6">
@@ -85,7 +87,8 @@
 
           <div class="col-6">
             <label for="message-text" class="col-form-label">Message:</label>
-            <textarea class="form-control" id="message-text"></textarea>
+            <textarea class="form-control" id="mensajetext"></textarea>
+            Escriba aquí sus notas
           </div>
 
         </form>
@@ -94,7 +97,7 @@
       <div class="card-footer text-body-secondary d-flex justify-content-end">
 
         <button type="button" class="btn btn-secondary">Cancel</button>
-        <a href="#" class="btn btn-primary">Send</a>
+        <a href="#" class="btn btn-primary" id="enviar">Send</a>
       </div>
     </div>
 
@@ -105,6 +108,7 @@
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"
     integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm"
     crossorigin="anonymous"></script>
+    <script src="app.js"></script>
 </body>
 
 </html>
